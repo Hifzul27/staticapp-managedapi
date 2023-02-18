@@ -19,7 +19,7 @@
         $("form").submit(function (event) {
             event.preventDefault();
             var text = $("#text").val();
-            $.post("https://uppercasefunc.azurewebsites.net/api/uppercase?text=" + encodeURIComponent(text), function (data, status) {
+            $.post("/api/uppercase?text=" + encodeURIComponent(text), function (data, status) {
                 $("#result").text(data);
             });
         });
